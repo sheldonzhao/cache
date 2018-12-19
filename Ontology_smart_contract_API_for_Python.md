@@ -1,31 +1,78 @@
 <h1 align="center">Ontology Smart Contract API for Python</h1>
 <p align="center" class="version">Version 0.1</p>
 
-## Content
-
 ## Introduction
 
-## Ontology API
+The Ontology smart contract API for Python supports querying information of transaction, block, contract, and blockchain, storing data, invoking native contract and so on. The future will also support more functions and applications.
+
+- [Introduction](#introduction)
+- [1. Ontology API](#1.-ontology-api)
+    - [Attribute](#attribute)
+    - [Contract](#contract)
+    - [Header](#header)
+    - [Native](#native)
+    - [Runtime](#runtime)
+    - [Transaction](#transaction)
+- [2. System API](#2.-system-api)
+    - [Blockchain](#blockchain)
+    - [Block](#block)
+    - [Contract](#contract)
+    - [ExecutionEngine](#executionengine)
+    - [Header](#header)
+    - [Runtime](#runtime)
+    - [Storage](#storage)
+    - [Transaction](#transaction)
+
+
+## 1. Ontology API
+
+### Attribute
 
 | Package | Name | Parameter |      |
 | ---- | ---- | ---- | ---- |
 |           ontology.interop.Ontology.Attribute |                  GetUsage |                                   transaction_attr | get transaction attribute usage |
 |           ontology.interop.Ontology.Attribute |                   GetData |                                   transaction_attr | get transaction attribute data |
+
+### Contract
+
+| Package | Name | Parameter |      |
+| ---- | ---- | ---- | ---- |
 |            ontology.interop.Ontology.Contract |                 GetScript |                                           contract | get contract script hash |
 |            ontology.interop.Ontology.Contract |                    Create | script, parameter_list, return_type, properties, name, version, author, email, description | create a contract |
 |            ontology.interop.Ontology.Contract |                   Migrate | script, parameter_list, return_type, properties, name, version, author, email, description | migrate  contract |
+
+### Header
+
+| Package | Name | Parameter |      |
+| ---- | ---- | ---- | ---- |
 |              ontology.interop.Ontology.Header |                GetVersion |                                             header | get the version of header |
 |              ontology.interop.Ontology.Header |             GetMerkleRoot |                                             header | get the merkle root of the transactions contained in the block |
 |              ontology.interop.Ontology.Header |          GetConsensusData |                                             header | get the address of the consensus |
 |              ontology.interop.Ontology.Header |          GetNextConsensus |                                             header | get the address where the next consensus will occur |
-|              ontology.interop.Ontology.Native |                    Invoke |                   param,method,contractAddress,ver | nvoke native contract |
+
+### Native
+
+| Package | Name | Parameter |      |
+| ---- | ---- | ---- | ---- |
+|              ontology.interop.Ontology.Native |                    Invoke |                   param,method,contractAddress,ver | invoke native contract |
+
+### Runtime
+
+| Package | Name | Parameter |      |
+| ---- | ---- | ---- | ---- |
 |             ontology.interop.Ontology.Runtime |           Base58ToAddress |                                                arg | transfer base58 address to byte array |
 |             ontology.interop.Ontology.Runtime |           AddressToBase58 |                                                arg | byte array address to base58 |
 |             ontology.interop.Ontology.Runtime | GetCurrentBlockHash |                                                    | get current block hash |
+
+### Transaction
+
+| Package | Name | Parameter |      |
+| ---- | ---- | ---- | ---- |
 |         ontology.interop.Ontology.Transaction |                   GetType |                                        transaction | get transaction type |
 |         ontology.interop.Ontology.Transaction |             GetAttributes |                                        transaction | get transaction attributes |
 
-## System API
+
+## 2. System API
 
 | Package | Name | Parameter |      |
 | ---- | ---- | ---- | ---- |
