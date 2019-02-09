@@ -1,6 +1,7 @@
 ## 1. Block
 database: block_db
 table: block
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |Hash (PRIMARY KEY) | Uint256| hex_string|
@@ -26,6 +27,7 @@ Note:
 ## 2. Transaction
 database: transaction_db
 table: transaction
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |Hash (PRIMARY KEY) | Uint256| hex_string|
@@ -48,6 +50,7 @@ table: transaction
 ### 3.1 event_native_ont
 database: event_db
 table: event_native_ont
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string |
@@ -60,6 +63,7 @@ table: event_native_ont
 
 ### 3.2 event_native_ong
 table: event_native_ong
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string |
@@ -69,6 +73,7 @@ table: event_native_ong
 
 ### 3.3 event_native_ontid
 table: event_native_ontid
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string |
@@ -79,6 +84,7 @@ table: event_native_ontid
 ### 3.4 event_non_native
 
 table: event_contract_name
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string |
@@ -93,6 +99,7 @@ table: event_contract_name
 ## 4. Contract Deployment
 database: contract_db
 table: contract
+
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |avm_code((PRIMARY KEY))| hex_string| hex_string|
