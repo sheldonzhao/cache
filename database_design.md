@@ -1,5 +1,6 @@
 ## 1. Block
 database: block_db
+
 table: block
 
 | Field | Original Type  | MySQL type|
@@ -26,6 +27,7 @@ Note:
 
 ## 2. Transaction
 database: transaction_db
+
 table: transaction
 
 | Field | Original Type  | MySQL type|
@@ -49,6 +51,7 @@ table: transaction
 ## 3. Event (按合约建表)
 ### 3.1 event_native_ont
 database: event_db
+
 table: event_native_ont
 
 | Field | Original Type  | MySQL type|
@@ -98,6 +101,7 @@ table: event_contract_name
 
 ## 4. Contract Deployment
 database: contract_db
+
 table: contract
 
 | Field | Original Type  | MySQL type|
