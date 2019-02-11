@@ -5,25 +5,19 @@ table: block
 
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
-|Hash (PRIMARY KEY) | Uint256| hex_string|
-| Version |  uint32   | string |
+|block_hash (PRIMARY KEY) | Uint256| hex_string|
 |   PrevBlockHash   |   Uint256     | hex_string|
 |   TransactionsRoot   |  Uint256      | hex_string|
 |  BlockRoot    |    Uint256    | hex_string|
 |  Timestamp    |   uint32     | BigInt|
 |   Height   |   uint32     | BigInt|
-|   ConsensusData   |    uint64    | string |
-|   ConsensusPayload   |    []byte     | string|
-|   NextBookkeeper   |    20 bytes    | hex_string |
-|   Bookkeepers   |   [][]byte    | serialize and save as json type |
-|   SigData  |    [][]byte  | serialize and save as json type |
+|block_hex|hex|hex|
 
 Note: 
 1. 字段中没有交易transaction相关的信息
 
 问题:
-1. Go代码里面的block有raw, signedAddr, nonDirectConstracted三个字段，但块信息打印出来的时候没有这三个字段
-2. Notify推送的信息是十六进制字符串吗？
+1. Notify推送的信息是十六进制字符串吗？YES
 
 ## 2. Transaction
 database: transaction_db
