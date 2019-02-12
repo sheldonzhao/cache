@@ -22,13 +22,22 @@ Note:
 ## 2. Transaction
 database: transaction_db
 
-table: transaction
+table: transaction_deploy
 
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
 |tx_hash (PRIMARY KEY) | Uint256| hex_string|
 |   Height   |   uint32     | BigInt|
-|TxType| byte| string|
+|TxType| byte| 209 deploy|
+|tx_hex|hex|hex|
+
+table: transaction_invoke
+
+| Field | Original Type  | MySQL type|
+| ----------- | ----------- |-----|
+|tx_hash (PRIMARY KEY) | Uint256| hex_string|
+|   Height   |   uint32     | BigInt|
+|TxType| byte| 208 invoke|
 |tx_hex|hex|hex|
 
 
@@ -42,6 +51,8 @@ table: event_native_ont
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string | |
 |  Contract_address    |  []byte    | hex    |
+|method|hex|hex|
+|state_hex|hex|hex|
 
 
 ### 3.2 event_native_ong
@@ -51,6 +62,8 @@ table: event_native_ong
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string | |
 |  Contract_address    |  []byte    | hex    |
+|method|hex|hex|
+|state_hex|hex|hex|
 
 ### 3.3 event_native_ontid
 table: event_native_ontid
@@ -59,6 +72,8 @@ table: event_native_ontid
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string | |
 |  Contract_address    |  []byte    | hex    |
+|method|hex|hex|
+|state_hex|hex|hex|
 
 ### 3.4 event_non_native
 
@@ -68,6 +83,8 @@ table: event_contract_name
 | ----------- | ----------- |-----|
 |  TxHash |  Uint256  |  hex_string | |
 |  Contract_address    |  []byte    | hex    |
+|method|hex|hex|
+|state_hex|hex|hex|
 
 问题：
 1.怎么命名非native的表，建议event_contractHash不会重复
