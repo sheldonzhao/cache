@@ -11,6 +11,7 @@ table: block
 |  BlockRoot    |    Uint256    | hex_string|
 |  Timestamp    |   uint32     | BigInt|
 |   Height   |   uint32     | BigInt|
+|transaction_num|int|int|
 |block_hex|hex|hex|
 
 Note: 
