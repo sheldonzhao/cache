@@ -53,6 +53,7 @@ table: event_native_ont
 |  Contract_address    |  []byte    | hex    |
 |method|hex|hex|
 |state_hex|hex|hex|
+|   Height   |   uint32     | BigInt|
 
 
 ### 3.2 event_native_ong
@@ -64,6 +65,7 @@ table: event_native_ong
 |  Contract_address    |  []byte    | hex    |
 |method|hex|hex|
 |state_hex|hex|hex|
+|   Height   |   uint32     | BigInt|
 
 ### 3.3 event_native_ontid
 table: event_native_ontid
@@ -74,6 +76,7 @@ table: event_native_ontid
 |  Contract_address    |  []byte    | hex    |
 |method|hex|hex|
 |state_hex|hex|hex|
+|   Height   |   uint32     | BigInt|
 
 ### 3.4 event_non_native
 
@@ -85,6 +88,7 @@ table: event_contract_name
 |  Contract_address    |  []byte    | hex    |
 |method|hex|hex|
 |state_hex|hex|hex|
+|   Height   |   uint32     | BigInt|
 
 问题：
 1.怎么命名非native的表，建议event_contractHash不会重复
