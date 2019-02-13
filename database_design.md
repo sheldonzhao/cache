@@ -43,49 +43,18 @@ table: transaction_invoke
 
 
 ## 3. Event (按合约建表)
-### 3.1 event_native_ont
-database: event_db
 
-table: event_native_ont
+Event:
+* event_native_ont
+* event_native_ong
+* event_native_ontid
+* event_non_native(event_contract_name)
+
 
 | Field | Original Type  | MySQL type|
 | ----------- | ----------- |-----|
-|  TxHash |  Uint256  |  hex_string | |
-|  Contract_address    |  []byte    | hex    |
-|method|hex|hex|
-|state_hex|hex|hex|
-|   Height   |   uint32     | BigInt|
-
-
-### 3.2 event_native_ong
-table: event_native_ong
-
-| Field | Original Type  | MySQL type|
-| ----------- | ----------- |-----|
-|  TxHash |  Uint256  |  hex_string | |
-|  Contract_address    |  []byte    | hex    |
-|method|hex|hex|
-|state_hex|hex|hex|
-|   Height   |   uint32     | BigInt|
-
-### 3.3 event_native_ontid
-table: event_native_ontid
-
-| Field | Original Type  | MySQL type|
-| ----------- | ----------- |-----|
-|  TxHash |  Uint256  |  hex_string | |
-|  Contract_address    |  []byte    | hex    |
-|method|hex|hex|
-|state_hex|hex|hex|
-|   Height   |   uint32     | BigInt|
-
-### 3.4 event_non_native
-
-table: event_contract_name
-
-| Field | Original Type  | MySQL type|
-| ----------- | ----------- |-----|
-|  TxHash |  Uint256  |  hex_string | |
+|  TxHash(PRIMARY KEY) |  Uint256  |  hex_string | |
+|Id(PRIMARY KEY)|smallint|smallint|
 |  Contract_address    |  []byte    | hex    |
 |method|hex|hex|
 |state_hex|hex|hex|
