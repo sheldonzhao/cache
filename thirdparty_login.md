@@ -19,10 +19,11 @@ Docking includes front-end docking and server docking. The front-end docking is 
 
 There are two ways to integrate the ONT ID login: the first is to jump to a specific URL and the second is to integrate a plugin - `plugin.js` in the page. Here is the way to dock quickly. The way the page integrates plugins is described below.
 
- ```
- http://139.219.136.188:10390/signin?params={value}
- value = window.encodeURIComponent(appontid + '&' + appname + '&' + callback_url + '&' + lang)
- ```
+```
+ http://139.219.136.188:10390/signin?params={value}
+ value = window.encodeURIComponent(appontid + '&' + appname + '&' + callback_url + '&' + lang)
+ ```
+
 
  ```lang``` is the language of page, en for English, and zh for Chinese.
  ```appontid``` is the ontid of the application.
@@ -75,20 +76,21 @@ Here is the way to use the JS plugin.
 4. After the login is successful, trigger the callback onSignIn and send ```JWT token``` to the back-end of the applicaton.
 
 ```
-    //get JWT token
-    Function onSignIn(result) {
-      Const {access_token, ontid} = result
-      ...
-       //sent to the Website Application back end
-        Var xhr = new XMLHttpRequest();
-        Xhr.open('POST', 'https://yourbackend.example.com/tokensignin');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        Xhr.onload = function() {
-          Console.log('Signed in as: ' + xhr.responseText);
-        };
-        Xhr.send('idtoken=' + id_token);
-    }
+    //get JWT token
+    function onSignIn(result) {
+      const {access_token, ontid} = result
+      ...
+       //sent to the  Website Application back end
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://yourbackend.example.com/tokensignin');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+          console.log('Signed in as: ' + xhr.responseText);
+        };
+        xhr.send('idtoken=' + id_token);
+    }
 ```
+
 5. Application's back-end verifies ``` JWT token ```
 
 ## ONT ID associates authorization login of third-parties
@@ -99,7 +101,7 @@ We provide the function that can associate third-party authorization login. In s
 
 Now supported: WeChat and Facebook. All major third-party accounts will be supported in the future, such as QQ, Weibo, Google, Twitter, etc.
 
-[![V9GyCT.md.png](https://github.com/ontio/documentation/blob/master/pro-website-docs/assets/ONT%20ID%20OAuth2%20Flow-en.png?raw=true)
+![V9GyCT.md.png](https://github.com/ontio/documentation/blob/master/pro-website-docs/assets/ONT%20ID%20OAuth2%20Flow-en.png?raw=true)
 
 
 ### Access procedures
