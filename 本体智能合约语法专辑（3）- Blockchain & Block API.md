@@ -24,8 +24,8 @@ from ontology.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, G
 #### GetHeight 获取当前最新块高
 
 ```
-from boa.interop.System.Runtime import Notify
-from boa.interop.System.Blockchain import GetHeight
+from ontology.interop.System.Runtime import Notify
+from ontology.interop.System.Blockchain import GetHeight
 
 def Main(operation):
     if operation == 'demo':
@@ -42,8 +42,8 @@ def demo():
 #### GetHeader 通过块高获取区块头
 
 ```
-from boa.interop.System.Runtime import Notify
-from boa.interop.System.Blockchain import GetHeader
+from ontology.interop.System.Runtime import Notify
+from ontology.interop.System.Blockchain import GetHeader
 
 def Main(operation, args):
     if operation == 'demo':
@@ -67,7 +67,7 @@ def demo():
 以16进制格式的交易哈希"9f270aa3a4c13c46891ff0e1a2bdb3ea0525669d414994aadf2606734d0c89c1"为例。首先将其反序得到“c1890c4d730626dfaa9449419d662505eab3bda2e1f01f89463cc1a4a30a279”，你可以通过SmartX提供的转换工具Hex Number(little endian) <--> Number实现这一步。然后将其转成bytearray格式{0xc1,0x89,0x0c,0x4d,0x73,0x06,0x26,0xdf,0xaa,0x94,0x49,0x41,0x9d,0x66,0x25,0x05,0xea,0xb3,0xbd,0xa2,0xe1,0xf0,0x1f,0x89,0x46,0x3c,0xc1,0xa4,0xa3,0x0a,0x27,0x9f}，你可以通过SmartX提供的转换工具String <--> Byte Array实现这一步。最后，将得到的bytearray转换成"\xc1\x89\x0c\x4d\x73\x06\x26\xdf\xaa\x94\x49\x41\x9d\x66\x25\x05\xea\xb3\xbd\xa2\xe1\xf0\x1f\x89\x46\x3c\xc1\xa4\xa3\x0a\x27\x9f"。
 
 ```
-from boa.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
+from ontology.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
 
 def Main(operation):
     if operation == 'demo':
@@ -85,7 +85,7 @@ def demo():
 #### GetTransactionHeight 通过交易哈希获取交易高度
 
 ```
-from boa.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
+from ontology.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
 
 def Main(operation):
     if operation == 'demo':
@@ -105,7 +105,7 @@ def demo():
 合约哈希的转换过程与交易哈希一致。
 
 ```
-from boa.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
+from ontology.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
 
 def Main(operation):
     if operation == 'demo':
@@ -127,7 +127,7 @@ def demo():
 1. Get block by height 通过块高获取区块
 
 ```
-from boa.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
+from ontology.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
 
 def Main(operation):
     if operation == 'demo':
@@ -144,7 +144,7 @@ def demo():
 
 
 ```
-from boa.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
+from ontology.interop.System.Blockchain import GetHeight, GetHeader, GetBlock, GetTransactionHeight, GetContract, GetTransactionByHash
 
 def Main(operation):
     if operation == 'demo':
@@ -170,8 +170,8 @@ from ontology.interop.System.Block import GetTransactions, GetTransactionCount, 
 #### GetTransactionCount 获取指定区块的交易数量
 
 ```
-from boa.interop.System.Blockchain import GetBlock
-from boa.interop.System.Block import GetTransactionCount
+from ontology.interop.System.Blockchain import GetBlock
+from ontology.interop.System.Block import GetTransactionCount
 
 def Main(operation):
     if operation == 'demo':
@@ -188,8 +188,8 @@ def demo():
 #### GetTransactions 获取指定区块的所有交易
 
 ```
-from boa.interop.System.Blockchain import GetBlock
-from boa.interop.System.Block import GetTransactionCount
+from ontology.interop.System.Blockchain import GetBlock
+from ontology.interop.System.Block import GetTransactionCount
 
 def Main(operation):
     if operation == 'demo':
@@ -206,8 +206,8 @@ def demo():
 #### GetTransactionByIndex 获取指定区块的指定交易
 
 ```
-from boa.interop.System.Blockchain import GetBlock
-from boa.interop.System.Block import GetTransactionByIndex
+from ontology.interop.System.Blockchain import GetBlock
+from ontology.interop.System.Block import GetTransactionByIndex
 
 def Main(operation):
     if operation == 'demo':
