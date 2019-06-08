@@ -1,5 +1,4 @@
 <h1 align="center">本体智能合约语法专辑（3）- Blockchain & Block API</h1>
-<p align="center" class="version">Version 0.1</p>
 
 ### 1.导语
 
