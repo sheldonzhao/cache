@@ -7,7 +7,7 @@ Version | Author | Reviewer | Time
 
 ## 1. Basic APIs
 
-### 1.1 
+### 1.1 获取官网主页信息
 ```java
 url: /api/api-query-data
 method: POST
@@ -29,7 +29,7 @@ method: POST
 | updated_at | timestamp             | 
 
 
-### 1.2
+### 1.2 上传图片
 ```java
 url: /api/api-upload-img
 method: POST
@@ -40,7 +40,7 @@ method: POST
 |file  | MultipartFile|
 
 
-### 1.3
+### 1.3 上传文件
 ```java
 url: /api/api-upload-file
 method: POST
@@ -49,7 +49,7 @@ method: POST
 | -------------- | --------| 
 |file  | MultipartFile|
 
-### 1.4
+### 1.4 上传代码
 ```java
 url: /api/api-upload-code
 method: POST
@@ -58,7 +58,8 @@ method: POST
 | -------------- | --------| 
 |file  | MultipartFile|
 
-### 1.5
+### 1.5 保存数据
+
 ```java
 url: /api/api-save-data
 method: POST
@@ -71,7 +72,7 @@ method: POST
 |message|  String|
 
 
-### 1.6
+### 1.6 保存邮件
 ```java
 url: /api/api-save-mail
 method: POST
@@ -87,7 +88,7 @@ method: POST
 |email |String|
 |your_message |String|
 
-### 1.7
+### 1.7 保存Dapp
 ```java
 url: /api/api-save-dapp
 method: POST
@@ -125,7 +126,8 @@ method: POST
 |report_file| String|
 
 
-### 1.8
+### 1.8 获取Dapp列表
+
 ```java
 url: /api/api-app-list
 method: POST
@@ -151,7 +153,7 @@ method: POST
 |report_file | String|
 |agreement|String|
 
-### 1.9
+### 1.9 获取指定Dapp信息
 ```java
 url: /api/api-app-detail
 method: POST
@@ -176,7 +178,7 @@ method: POST
 |report_file | String|
 |agreement|String|
 
-### 1.10
+### 1.10 获取Banner列表
 ```java
 url: /api/api-banner-list
 method: POST
@@ -199,7 +201,8 @@ method: POST
 | created_at | timestamp             | 
 | updated_at | timestamp             | 
 
-### 1.11 
+### 1.11 获取指定Banner信息
+
 ```java
 url: /api/api-banner-detail
 method: POST
